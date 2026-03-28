@@ -1,0 +1,14 @@
+---
+interface MenuCardProps {
+  heading: string;
+  image: string;
+  section: string;
+}
+
+const { heading, image, section } = Astro.props;
+---
+
+<div class="aboutCard" data-spec={section}>
+  <img src={image} alt={heading} />
+  <h6>{heading}</h6>
+</div>

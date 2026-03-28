@@ -1,0 +1,85 @@
+---
+import Heading from "../components/heading.astro";
+import FranshiseList from "../components/list-data.astro";
+---
+
+<section id="franchise" class="menu-section">
+  <Heading
+    subtitle="Franchise"
+    title="Start Your Journey"
+    content="Entrepreneurs, young graduates, or anyone with capital and enthusiasm — join the Bezt Kulfis family."
+  />
+
+  <div class="franchise-wrapper">
+    <div class="franchise-card">
+      <h6>Franchise Highlights</h6>
+      <ul class="franchise-list" role="list">
+        <FranshiseList title="Franchise Model" values="FOFO" />
+        <FranshiseList title="Area Required" values="150 - 300 sq.ft" />
+        <FranshiseList title="Agreement Period" values="Lifetime" />
+        <FranshiseList title="Profit Margin" values="40% - 50%" />
+        <FranshiseList title="Royalty Fee" values="No Royalty" />
+        <FranshiseList title="Territory Exclusivity" values="1.5 km Radius" />
+        <FranshiseList title="Manpower" values="2 Persons" />
+      </ul>
+    </div>
+    <div class="franchise-card colored">
+      <h6>Investment Breakup</h6>
+      <span>For a 150 sq.ft setup</span>
+      <ul class="franchise-list" role="list">
+        <FranshiseList
+          title="Franchise Fee (Non-refundable)"
+          values="₹2,00,000"
+        />
+        <FranshiseList title="Equipment" values="₹1,47,780" />
+        <FranshiseList title="Initial Stock" values="₹51,220" />
+      </ul>
+      <div class="investment-card">
+        <p>Total Investment</p>
+        <span>₹3,99,000</span>
+      </div>
+      <div class="investment-checklist">
+        <div class="investment-list">
+          <i class="icon checklist"></i>
+          <span>Flexible Business Models</span>
+        </div>
+        <div class="investment-list">
+          <i class="icon checklist"></i>
+          <span>Simplified Menu</span>
+        </div>
+        <div class="investment-list">
+          <i class="icon checklist"></i>
+          <span>Complete Training Provided</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sale-wrapper">
+    <h6>Sales Projection</h6>
+    <div class="sales-card-wrapper">
+      <div class="sales-card">
+        <h6>Model 1</h6>
+        <ul class="sales-data" role="list">
+          <FranshiseList title="Daily Sales" values="₹8,000/day" />
+          <FranshiseList title="Monthly Turnover" values="₹2,40,000/mo" />
+        </ul>
+        <div class="profit-card">
+          <p>Monthly Profit</p>
+          <span>₹59,000/mo</span>
+        </div>
+      </div>
+      <div class="sales-card">
+        <h6>Model 2</h6>
+        <ul class="sales-data" role="list">
+          <FranshiseList title="Daily Sales" values="₹10,000/day" />
+          <FranshiseList title="Monthly Turnover" values="₹3,00,000/mo" />
+        </ul>
+        <div class="profit-card">
+          <p>Monthly Profit</p>
+          <span>₹84,000/mo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

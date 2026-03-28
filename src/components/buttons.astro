@@ -1,0 +1,10 @@
+---
+interface ButtonProps {
+  text: string;
+  btnClass: string;
+}
+
+const { text, btnClass } = Astro.props;
+---
+
+<button class={btnClass}>{text}</button>

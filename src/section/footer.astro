@@ -1,0 +1,35 @@
+---
+import Heading from "../components/heading.astro";
+import AddressCard from "../components/contact-card.astro";
+import Button from "../components/buttons.astro";
+
+// Import local JSON files directly
+import aboutData from "../../public/script/kulfi.json";
+---
+
+<section id="footer" class="menu-section">
+  <Heading
+    subtitle="Contact"
+    title="Get in Touch"
+    content="Ready to start your franchise journey? Reach out today."
+  />
+  <div class="ContactCards">
+    {
+      aboutData.address.map((address) => (
+        <AddressCard
+          icon={address.icon}
+          heading={address.heading}
+          content={address.content}
+        />
+      ))
+    }
+  </div>
+  <div class="contact-banner">
+    <h3>Ready to Own a Bezt Kulfis?</h3>
+    <p>
+      Start your franchise with just ₹3,99,000 investment. No royalty, lifetime
+      agreement, 40-50% profit margins.
+    </p>
+    <Button text="Call 7550006455" btnClass="btn btn-primary hero-btn" />
+  </div>
+</section>

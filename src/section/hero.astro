@@ -1,0 +1,74 @@
+---
+import Button from "../components/buttons.astro";
+import About from "../components/about-card.astro";
+
+// Import local JSON files directly
+import aboutData from "../../public/script/kulfi.json";
+---
+
+<section id="hero" class="hero-section">
+  <div class="hero-content">
+    <div class="hero-header">
+      <span>India's Fast-Growing Kulfi Franchise</span>
+      <h1>Start Your Own Bezt Kulfi Franchise</h1>
+      <div class="chip yellow-chip">
+        <span>Investment starts at ₹3.99 Lakhs</span>
+      </div>
+      <div class="chip white-chip">
+        <i class="icon call-icon"></i>
+        <span><em>Call Us:</em>7550006455/7550066694</span>
+      </div>
+      <div class="highlight-wrapper">
+        <div class="highlights">
+          <p>40 - 50%</p>
+          <span>Profit Margin</span>
+        </div>
+        <div class="highlights">
+          <p>₹0</p>
+          <span>Royalty Fee</span>
+        </div>
+        <div class="highlights">
+          <p>Lifetime</p>
+          <span>Agreement</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-form">
+      <Button text="Get Started" btnClass="btn btn-primary hero-btn" />
+    </div>
+  </div>
+  <div class="hero-about">
+    <div class="about-section">
+      <div class="about-image">
+        <img
+          src="/public/assets/images/KulfiMascot.png"
+          alt="About Bezt Kulfi's"
+        />
+        <span class="about-gradient"></span>
+      </div>
+      <div class="about-content">
+        <div class="heading-section">
+          <span>About Us</span>
+          <h2>Be a Part of Bezt Kulfi'sFamily</h2>
+          <p>
+            Bezt Kulfis brings the legacy of true kulfi craftsmanship from Tamil
+            Nadu. Our menu features Kulfis, Creamy Shakes, Falooda, Ice Cream,
+            Jigarthanda, Rosemilk, Sandwich, Momos, Burger & more.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about-card-wrapper">
+      {
+        aboutData.about.map((about) => (
+          <About
+            icon={`icon ${about.icon}`}
+            heading={about.title}
+            content={about.content}
+          />
+        ))
+      }
+      <About />
+    </div>
+  </div>
+</section>

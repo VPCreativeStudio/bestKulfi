@@ -1,0 +1,15 @@
+---
+interface AddressCardProps {
+  icon: string;
+  heading: string;
+  content: string;
+}
+
+const { icon, heading, content } = Astro.props;
+---
+
+<div class="addressCard">
+  <i class={icon}></i>
+  <h6>{heading}</h6>
+  <p>{content}</p>
+</div>

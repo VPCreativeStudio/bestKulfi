@@ -1,0 +1,103 @@
+{
+    "about": [
+        {
+            "icon": "factory",
+            "title": "Own Manufacturing",
+            "content": "Complete in-house production ensures quality and consistency"
+        },
+        {
+            "icon": "profit",
+            "title": "High Profit Returns",
+            "content": "40-50% profit margins with simplified operations"
+        },
+        {
+            "icon": "fee",
+            "title": "No Royalty Fee",
+            "content": "Keep what you earn — zero royalty, maximum freedom"
+        },
+        {
+            "icon": "users",
+            "title": "Easy Training",
+            "content": "Complete training provided for 2-person operation"
+        }
+    ],
+    "menu": [
+        {
+            "menuImage": "factory",
+            "menuName": "Kulfi Stick",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Pan Kulfi",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Spl. Kulfi Stick",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Kulfi Slice",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Kulfi Shakes",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Falooda",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Mastani",
+            "menuSection": "delights"
+        },{
+            "menuImage": "factory",
+            "menuName": "Ice Cream",
+            "menuSection": "delights"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Pan Kulfi",
+            "menuSection": "beverages"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Spl. Kulfi Stick",
+            "menuSection": "snacks"
+        },
+        {
+            "menuImage": "factory",
+            "menuName": "Kulfi Slice",
+            "menuSection": "nonveg"
+        }
+
+    ],
+    "address": [
+        {
+            "icon": "factory",
+            "heading": "Office Address",
+            "content": "No.23, 1st Floor, Jai Nagar, Arumbakkam, Chennai - 600106"
+        },
+        {
+            "icon": "profit",
+            "heading": "Phone",
+            "content": "7550006455 / 7550066694"
+        },
+        {
+            "icon": "fee",
+            "heading": "Email",
+            "content": "beztkulfisfranchise@gmail.com"
+        },
+        {
+            "icon": "users",
+            "heading": "Website",
+            "content": "https://beztkulfisfranchise.com/"
+        }
+    ]
+}

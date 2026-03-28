@@ -1,0 +1,13 @@
+---
+interface ListProps {
+  title: string;
+  values: string;
+}
+
+const { title, values } = Astro.props;
+---
+
+<li class="list-data" role="listitem">
+  <h6>{title}</h6>
+  <p>{values}</p>
+</li>

@@ -1,0 +1,47 @@
+---
+import Heading from "../components/heading.astro";
+import MenuCards from "../components/menu-cards.astro";
+
+// Import local JSON files directly
+import aboutData from "../../public/script/kulfi.json";
+---
+
+<section id="menu" class="menu-section">
+  <Heading
+    subtitle="Our Menu"
+    title="Taste the Legacy"
+    content="Customized menu options available for franchise partners."
+  />
+  <div class="tab-wrapper">
+    <div class="tab-action">
+      <div class="tab-link">
+        <i class="icon icecream"></i>
+        <span>Frozen Delights</span>
+      </div>
+      <div class="tab-link">
+        <i class="icon coffee"></i>
+        <span>Beverages</span>
+      </div>
+      <div class="tab-link">
+        <i class="icon snacks"></i>
+        <span>Snacks</span>
+      </div>
+      <div class="tab-link">
+        <i class="icon chicken"></i>
+        <span>Non-Veg</span>
+      </div>
+    </div>
+    <div class="tab-menus">
+      {
+        aboutData.menu.map((menu) => (
+          <MenuCards
+            section={menu.menuSection}
+            img={menu.menuImage}
+            heading={menu.menuName}
+          />
+        ))
+      }
+    </div>
+  </div>
+  <MenuCards />
+</section>

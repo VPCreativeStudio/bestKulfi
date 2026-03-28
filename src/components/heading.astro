@@ -1,0 +1,15 @@
+---
+interface HeadingProps {
+  subtitle: string;
+  title: string;
+  content: string;
+}
+
+const { subtitle, title, content } = Astro.props;
+---
+
+<div class="heading-section">
+  <span>{subtitle}</span>
+  <h2>{title}</h2>
+  <p>{content}</p>
+</div>
