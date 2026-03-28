@@ -1,0 +1,29 @@
+@use "./mixin" as *;
+@use "./variables" as *;
+@use "./root" as *;
+
+body {
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  font-family: var(--fontRegular);
+  font-size: var(--ft-16);
+  line-height: calc(var(--ft-16) * 1.5);
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.icon {
+  @include flex-element;
+  @include transform-origin(center);
+  transition: var(--transition);
+
+  &::before {
+    content: "";
+    @include inline-block-element;
+    transition: var(--transition);
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+  }
+}

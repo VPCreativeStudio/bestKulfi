@@ -38,37 +38,102 @@ import aboutData from "../../public/script/kulfi.json";
     </div>
   </div>
   <div class="hero-about">
-    <div class="about-section">
-      <div class="about-image">
-        <img
-          src="../../public/assets/images/KulfiMascot.png"
-          alt="About Bezt Kulfi's"
-        />
-        <span class="about-gradient"></span>
-      </div>
-      <div class="about-content">
-        <div class="heading-section">
-          <span>About Us</span>
-          <h2>Be a Part of Bezt Kulfi'sFamily</h2>
-          <p>
-            Bezt Kulfis brings the legacy of true kulfi craftsmanship from Tamil
-            Nadu. Our menu features Kulfis, Creamy Shakes, Falooda, Ice Cream,
-            Jigarthanda, Rosemilk, Sandwich, Momos, Burger & more.
-          </p>
+    <div class="about-wrapper">
+      <div class="about-section">
+        <div class="about-image">
+          <img
+            src="../../public/assets/images/KulfiMascot.png"
+            alt="About Bezt Kulfi's"
+          />
+          <span class="about-gradient"></span>
+        </div>
+        <div class="about-content">
+          <div class="heading-section">
+            <span>About Us</span>
+            <h2>Be a Part of Bezt Kulfi'sFamily</h2>
+            <p>
+              Bezt Kulfis brings the legacy of true kulfi craftsmanship from
+              Tamil Nadu. Our menu features Kulfis, Creamy Shakes, Falooda, Ice
+              Cream, Jigarthanda, Rosemilk, Sandwich, Momos, Burger & more.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="about-card-wrapper">
-      {
-        aboutData.about.map((about) => (
-          <About
-            icon={`icon ${about.icon}`}
-            heading={about.title}
-            content={about.content}
-          />
-        ))
-      }
-      <About />
+      <div class="about-card-wrapper">
+        {
+          aboutData.about.map((about) => (
+            <About
+              icon={`icon ${about.icon}`}
+              heading={about.title}
+              content={about.content}
+            />
+          ))
+        }
+        <About />
+      </div>
     </div>
   </div>
 </section>
+
+<style lang="scss" is:global>
+  @use "../assets/scss/mixin" as *;
+  @use "../assets/scss/variables" as *;
+  @use "../assets/scss/root" as *;
+  @use "../assets/scss/base" as *;
+
+  .hero-content {
+    background: url(../assets/images/hero-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    @include grid-element;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 10rem;
+    @include rel-position;
+
+    @include rel-position;
+    &::after {
+      content: "";
+      @include abs-position;
+      width: 100%;
+      height: 100%;
+      background: var(--blackClr-20);
+      inset: 0;
+      z-index: -1;
+    }
+  }
+
+  .hero-about {
+    padding: 0 8rem;
+
+    .about-wrapper {
+      border-radius: 2.5rem 2.5rem 0 0;
+      padding: 0 4rem;
+      transform: translateY(-3rem);
+      background: var(--whiteClr);
+
+      .about-section {
+        @include grid-element;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
+
+    .about-card-wrapper {
+      @include grid-element;
+      gap: var(--grid-gap);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+
+      .aboutCard {
+        background-color: var(--primaryTxtClr);
+        padding: 1rem;
+        border-radius: 1rem;
+        width: clamp(15rem, 100%, 20rem);
+      }
+    }
+  }
+</style>

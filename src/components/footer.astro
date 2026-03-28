@@ -2,3 +2,33 @@
   <h6>Bezt <span>Kulfi's</span></h6>
   <span>© 2026 Bezt Kulfis. All rights reserved. | Vidhuran Traders</span>
 </footer>
+
+<style lang="scss" is:global>
+  @use "../assets/scss/mixin" as *;
+  @use "../assets/scss/variables" as *;
+  @use "../assets/scss/root" as *;
+  @use "../assets/scss/base" as *;
+
+  footer {
+    padding: 2rem 10rem;
+    text-align: center;
+    background: var(--txtClr);
+    @include grid-element;
+    gap: 0.5rem;
+    justify-content: center;
+
+    h6 {
+      font-size: var(--ft-20);
+      color: var(--whiteClr);
+      font-family: var(--fontHdMedium);
+
+      span {
+        color: var(--secPrimaryClr);
+      }
+    }
+
+    span {
+      color: var(--whiteClr-70);
+    }
+  }
+</style>

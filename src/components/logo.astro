@@ -1,8 +1,37 @@
-<div>
+<div class="logo">
   <img
-    src="../../public/assets/images/BeztKulfiLogo.png"
+    src="../../public/assets/images/Bezt-Kulfi.png"
     alt="Best Kulfi Logo"
     class="logo"
   />
   <span>Bezt Kulfi's</span>
 </div>
+
+<style lang="scss">
+  @use "../assets/scss/mixin" as *;
+  @use "../assets/scss/variables" as *;
+  @use "../assets/scss/root" as *;
+  @use "../assets/scss/base" as *;
+
+  .logo {
+    @include flex-element;
+    align-items: center;
+    @include rel-position;
+
+    img {
+      @include abs-position;
+      width: 5rem;
+      height: auto;
+      top: -0.75rem;
+      left: 0;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-family: var(--fontHdBold);
+      color: var(--whiteClr);
+      @include block-element;
+      padding: 0.75rem 0 0.75rem 5rem;
+    }
+  }
+</style>

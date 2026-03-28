@@ -5,14 +5,80 @@ import Logo from "../components/logo.astro";
 
 <header>
   <Logo />
-  <nav role="navigation">
-    <ul role="list">
-      <li role="listitem"><a href="#home">Home</a></li>
-      <li role="listitem"><a href="#menu">Menu</a></li>
-      <li role="listitem"><a href="#franchise">Franchise</a></li>
-      <li role="listitem"><a href="#gallery">Gallery</a></li>
-      <li role="listitem"><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <Button text="Call Now" />
+
+  <div class="nav-section">
+    <nav role="navigation">
+      <ul role="list">
+        <li role="listitem"><a href="#home">About</a></li>
+        <li role="listitem"><a href="#menu">Menu</a></li>
+        <li role="listitem"><a href="#franchise">Franchise</a></li>
+        <li role="listitem"><a href="#gallery">Gallery</a></li>
+        <li role="listitem"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <Button text="Call Now" btnClass="btn btn-primary" />
+  </div>
 </header>
+
+<style lang="scss">
+  @use "../assets/scss/mixin" as *;
+  @use "../assets/scss/variables" as *;
+  @use "../assets/scss/root" as *;
+  @use "../assets/scss/base" as *;
+
+  header {
+    @include flex-element;
+    align-items: center;
+    justify-content: space-between;
+    @include rel-position;
+    @include fixed-position;
+    width: 100vw;
+    padding: 0.75rem 10rem;
+    background: var(--primaryClr);
+    border-bottom: 1px solid var(--darkPrimaryClr);
+    z-index: 99;
+
+    .nav-section {
+      @include flex-element;
+      gap: 2rem;
+    }
+
+    nav ul {
+      @include flex-element;
+      gap: 0.5rem;
+
+      li {
+        @include rel-position;
+
+        &::before {
+          content: "";
+          @include abs-position;
+          width: 100%;
+          height: 0;
+          background: var(--secPrimaryClr);
+          bottom: 0;
+          left: 0;
+          transition: all 0.3s ease;
+        }
+
+        a {
+          padding: 0.5rem 1rem;
+          font-size: var(--ft-16);
+          font-family: var(--fontMedium);
+          color: var(--whiteClr);
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          &::before {
+            height: 100%;
+            z-index: -1;
+          }
+          a {
+            color: var(--darkPrimaryClr);
+          }
+        }
+      }
+    }
+  }
+</style>

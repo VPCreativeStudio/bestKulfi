@@ -19,3 +19,27 @@ import Layout from "../layouts/Layout.astro";
   <Footer />
   <FooterBar />
 </Layout>
+
+<style lang="scss" is:global>
+  @use "../assets/scss/mixin" as *;
+  @use "../assets/scss/variables" as *;
+  @use "../assets/scss/root" as *;
+  @use "../assets/scss/base" as *;
+
+  header,
+  section:not(.hero-section) {
+    padding: 6rem 10rem;
+  }
+
+  section:not(.hero-section) {
+    height: 100vh;
+    overflow: hidden;
+
+    &.bg-section {
+      background: var(--secBgClr);
+    }
+    &.ylw-section {
+      background: var(--secPrimaryClr);
+    }
+  }
+</style>

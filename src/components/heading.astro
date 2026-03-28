@@ -13,3 +13,37 @@ const { subtitle, title, content } = Astro.props;
   <h2>{title}</h2>
   <p>{content}</p>
 </div>
+
+<style lang="scss" is:global>
+  @use "../assets/scss/mixin" as *;
+  @use "../assets/scss/variables" as *;
+  @use "../assets/scss/root" as *;
+  @use "../assets/scss/base" as *;
+
+  .heading-section {
+    @include grid-element;
+    gap: 0.5rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16rem;
+
+    span {
+      color: var(--primaryTxtClr);
+      font-family: var(--fontMedium);
+      font-size: var(--ft-14);
+      line-height: 1.25rem;
+    }
+    h2 {
+      color: var(--txtClr);
+      font-family: var(--fontHdMedium);
+      font-size: var(--ft-32);
+      line-height: 3rem;
+    }
+    p {
+      color: var(--txtClr);
+      font-family: var(--fontMedium);
+      font-size: var(--ft-18);
+      line-height: var(--ft-24);
+    }
+  }
+</style>
